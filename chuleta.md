@@ -1,5 +1,7 @@
 ### Chuleta de control de versiones con git
-Conceptos mínimos que tenemos que saber sobre el control de versiones
+
+Conceptos mínimos que tenemos que saber sobre el control de versiones.
+
 CONTROL DE VERSIONES LOCAL: Es el que se realiza en una sola máquina. Soportado por todos los sistemas de control de versiones, desde los más antiguos hasta los actuales. Se realiza sobre un directorio y todos sus subdirectorios.
  REPOSITORIO LOCAL (Local Repository): Es una base de datos centralizado donde se guardan las distintas versiones de los ficheros sometidos a control de versiones. 
 REPOSITORIO REMOTO o REPOSITORIO o REPO (Remote repository/Repository/Repo): Es una base de datos centralizada donde se guardan las distintas versiones de los ficheros sometidos a control de versiones, y reside en el servidor centralizado (p.ej, en Github) .
@@ -27,7 +29,9 @@ Fork(bifurcar): clone que se hace dentro de un mismo servidor. Por ejemplo: el r
 Pull Request(solicitud de extracción): petición que hace el desarrollador de que los cambios hechos en su repositorio clonado mediante un FORK sean incorporados al repositorio original.
 Rebase (Rebasar): Rebasa la historia de una rama moviendo sus cambios a otra rama, aplicando cada commit uno tras otro.
 Merge (Combinar): Combina los cambios de dos o más ramas en un nuevo commit de fusión.
-Qué tenemos que saber hacer con Git (y GitHub)
+
+
+Qué tenemos que saber hacer con Git (y GitHub).
 
 En el intérprete de comandos de git-bash
 El terminal de git-Bash funciona como cualquier terminal de Linux. Sabiendo esto consideramos que:

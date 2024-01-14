@@ -45,3 +45,58 @@ nombre de la rama}” Mueve los cambios no los combina en un nuevo commit.
 
 Comandos interesantes: 
 “git diff {commit1}{commit2}” : Lista las diferencias entre los archivos de dos commits distintos.
+
+************En Remoto************
+
+•	Configurar git para que trabaje tras un proxy: 
+para http
+git config --global http.proxy http://<nombre de usuario>:<password>@<direccion_ip>:<puerto>
+para https
+git config --global https.proxy http://<nombre de usuario>:<password>@<direccion_ip>:<puerto>
+para deshabilitar el uso del proxy
+git config --global --unset http.proxy
+•	nombre de usuario: nombre de usuario para autenticarse en el servidor de proxy.
+•	password: password para identificarse en el servidor proxy.
+•	direccion_ip: dirección de servidor de proxy.
+•	puerto: en el que está escuchando el servidor proxy.
+
+
+•	Replicar un repositorio remoto localmente en nuestra máquina.
+git clone <repo url>
+El comando git clone se usa para crear una copia o clonar un repositorio remoto. Se utiliza git clone con la URL de un repositorio. Git es compatible con varios protocolos de red y sus formatos de URL correspondientes.
+Ej: git clone https://github.com/usuario/repo.git
+
+•	Replicar un repositorio local en un servidor remoto.
+Para replicar un repositorio local en un servidor remoto en Git, sigue los siguientes pasos:
+1.	Añade el servidor remoto a tu repositorio local utilizando el comando git remote add [nombre] [url]. Por ejemplo, si el nombre del servidor remoto es origin y la URL es https://github.com/usuario/repositorio.git, el comando sería git remote add origin https://github.com/usuario/repositorio.git.
+2.	Verifica que el servidor remoto se ha añadido correctamente utilizando el comando git remote -v.
+3.	Empuja los cambios de tu repositorio local al servidor remoto utilizando el comando git push [nombre] [rama]. Por ejemplo, si el nombre del servidor remoto es origin y la rama es master, el comando sería git push origin master.
+
+•	Traer los cambios de un repositorio remoto a un repositorio local.
+Para traer los cambios al repositorio local usaremos el comando git fetch [nombre servidor]
+
+•	Resolver los conflictos que se puedan producir al traerse estos cambios.
+ Buscando \<\<\<\<\<\<\<, ======= y \>\>\>\>\>\>\> y editando el archivo manualmente con los cambios deseados.
+
+•	Enviar los cambios de un repositorio local a uno remoto.
+git push origin <branch>
+
+•	Enviar una rama local al repositorio remoto de manera que la local quede enganchada (haga tracking de) la remota.
+Utilizaremos el siguiente comando: git push -u \<rama remota\> \<rama local\>
+
+•	Incorporar a ramas locales cambios que se producen en el repositorio remoto.
+1.	Descarga los cambios del servidor remoto a tu repositorio local utilizando el comando git fetch [nombre]. Por ejemplo, si el nombre del servidor remoto es origin, el comando sería git fetch origin.
+2.	Combina los cambios descargados en tu repositorio local utilizando el comando git merge [nombre]/[rama]. Por ejemplo, si la rama es master, el comando sería git merge origin/master.
+3.	Si hay conflictos, Git te notificará que hay conflictos sin resolver. Abre los archivos en conflicto y resuelve los conflictos manualmente utilizando el comando git mergetool. Si no tienes un programa de fusión configurado, puedes resolver los conflictos manualmente editando los archivos en conflicto.
+
+•	Crear un repositorio remoto vacío.
+  Para crear un repositorio remoto, le daremos a la opción  de new en nuestro menú de github, posteriormente le pondremos un nombre y elegiremos si es público o privado. Por último, le daremos a Create repository.
+
+•	Invitar a colaboradores.
+  Para invitar colaboradores pulsaremos en invite collaborators y a continuación en add people poniendo el nombre de los usuarios o correos a los que quieres invitar.
+
+•	Realizar un pull request entre dos ramas de un repositorio remoto.
+ Si vas a tu repositorio veras un botón llamado pull request, haz click en él.
+
+•	Realizar un pull request entre dos repositorios que resultaron de un Fork.
+De la misma manera que anteriormente, iremos a nuestro repositorio y pulsaremos en el botón pull request.

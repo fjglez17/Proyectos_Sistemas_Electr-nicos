@@ -18,7 +18,7 @@ CHECK-OUT Obtener una copia local descargando un fichero del repositorio. Puede 
 ADD(agregar) Realiza una copia de un fichero modificado, poniéndola en la zona de preparación para poder ser confirmada. 
 RESET Es el ‘undo’ de Git. Puede descartar la copia de la zona de preparación, pero también puede deshacer uno o varios commits (muy útil!) 
 RESTORE Versión simplificada de RESET, más intuitiva. 
-DIFF Compara versiones de ficheros. Hola flavi 
+DIFF Compara versiones de ficheros.
 CLONE(clonar): Replica un repositorio entero con todo su historial de cambios y actualiza el directorio local 
 PUSH(subir): Es la operación en la que se envían al repositorio centralizado un commit o conjunto de commits, incluido una rama entera. 
 PULL(bajar): Es la operación en la que se actualiza el repositorio y el directorio locales con commits que provienen del repositorio remoto. 
